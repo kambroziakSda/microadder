@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push "$DOCKER_USERNAME"/microadder
+echo $2 | docker login -u $1 --password-stdin
+#docker push $1/microadder
