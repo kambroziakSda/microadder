@@ -8,6 +8,7 @@ script:
   - docker build -t kambroziak/microadder:latest .
  
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash docker_push $DOCKER_USERNAME $DOCKER_PASSWORD
   on:
