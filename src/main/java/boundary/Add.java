@@ -19,7 +19,7 @@ public class Add {
     @Consumes(value = MediaType.APPLICATION_JSON)
     @POST
     public Response addTo(List<Integer> integers) {
-        List<Integer> collect = integers.stream().map(i -> i + 10).collect(Collectors.toList());
+        List<Integer> collect = integers.stream().map(i -> i + 20).collect(Collectors.toList());
         return Response.ok(collect).build();
 
     }
