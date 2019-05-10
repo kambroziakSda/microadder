@@ -5,7 +5,7 @@ services:
 
 script:
   - mvn clean install
-  - docker build -t kambroziak/microader:latest .
+  - docker build -t kambroziak/microadder:latest .
  
 deploy:
   provider: script
