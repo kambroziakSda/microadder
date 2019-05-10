@@ -1,3 +1,14 @@
 language: java
+
+services:
+  - docker
+
 script:
   - mvn clean install
+  - docker build -t kambroziak/microader:latest .
+ 
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
